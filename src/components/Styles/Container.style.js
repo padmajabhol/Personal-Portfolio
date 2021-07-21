@@ -1,9 +1,10 @@
 import styled from "styled-components";
-
-
+import tw from "twin.macro";
 
 export const AppContainer = styled.div`
-width: 100vw;
-height: 100vh;
-background-color:lightblue;
-`
+  ${tw`
+bg-black
+w-screen
+h-screen
+`}
+`;
