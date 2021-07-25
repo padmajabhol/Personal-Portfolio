@@ -1,13 +1,16 @@
 import "./App.css";
 import { AppContainer } from "./components/Styles/Container.style";
 import Nav from "./components/Navbar/Navbar";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <AppContainer>
-        <Nav />
-      </AppContainer>
+      <Router>
+        <AppContainer>
+          <Nav />
+        </AppContainer>
+      </Router>
     </div>
   );
 }
