@@ -9,8 +9,8 @@ function Nav() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  const showButton = () =>{
-    if(window.innerWidth <= 960) {
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
       setButton(false);
     } else {
       setButton(true);
@@ -21,42 +21,53 @@ function Nav() {
     showButton();
   }, []);
 
-  window.addEventListener('resize', showButton);
+  window.addEventListener("resize", showButton);
 
-  return(
+  return (
     <Navbar>
-        <Logo to="/" onClick={closeMobileMenu}>
-          Padmaja
-        </Logo>
-        <NavList>
+      <Logo to="/" onClick={closeMobileMenu}>
+        angela
+      </Logo>
+      <NavList>
         <div className="menu-icon" onClick={handleClick}>
-          <i style={{ color:'#fff' }} className={click ? 'fas fa-times' : 'fas fa-bars'}/>
+          <i
+            style={{ color: "#fff" }}
+            className={click ? "fas fa-times" : "fas fa-bars"}
+          />
         </div>
-        <List className={click ? 'nav-menu active' : 'nav-menu'}>
+        <List className={click ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-item">
-            <Link to='/about'className="nav-links" onClick={closeMobileMenu}>
+            <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
               <span className="text-white">01.</span>About
             </Link>
           </ul>
           <ul className="nav-item">
-            <Link to='/projects'className="nav-links" onClick={closeMobileMenu}>
+            <Link
+              to="/projects"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
               <span className="text-white">02.</span>Projects
             </Link>
           </ul>
           <ul className="nav-item">
-            <Link to='/experience'className="nav-links" onClick={closeMobileMenu}>
+            <Link
+              to="/experience"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
               <span className="text-white">03.</span>Experience
             </Link>
           </ul>
           <ul className="nav-item">
-            <Link to='/contact' className="nav-links" onClick={closeMobileMenu}>
+            <Link to="/contact" className="nav-links" onClick={closeMobileMenu}>
               <span className="text-white">04.</span>Contact
             </Link>
           </ul>
-        {button && <Resume onClick={showButton}>RESUME</Resume>}
+          {button && <Resume onClick={showButton}>RESUME</Resume>}
         </List>
       </NavList>
-  </Navbar>
+    </Navbar>
   );
 }
 
