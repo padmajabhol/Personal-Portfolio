@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         lobster: ["Lobster"],
         roboto: ["Roboto"],
+        raleway: ["Raleway"],
       },
       colors: {
         primary: "#CBA5EA",
